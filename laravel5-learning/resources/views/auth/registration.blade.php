@@ -30,7 +30,7 @@
     <a id="mainRef" href="/laravel5-learning/public/">Главная</a> | <a id="regRef" href="registration">Регистрация</a>
     <div id="wrapper">
         <div id="content">
-            <form method="post" action="/laravel5-learning/public/auth/resreg" accept-charset="UTF-8">
+            <form method="post" action="/medicine/laravel5-learning/public/auth/resreg" accept-charset="UTF-8">
                 {!! csrf_field() !!} @if($error == 1)
                 <div id="succesful">Добро пожаловать, {!! $name !!}. Регистрация прошла успешно.</div>
                 @elseif($error == 2)

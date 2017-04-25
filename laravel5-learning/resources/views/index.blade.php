@@ -1,10 +1,10 @@
 <!DOCTYPEhtml PUBLIC "-//W3C//DTD html 4.1 Final//EN">
 <html>
- <head>
- <title>Клиника "DoctorPro"</title>
-<metahttp-equiv="Content-Type" content="text/html;charset=windows-1251">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}" />    
- </head>
+<head>
+    <title>Клиника "DoctorPro"</title>
+    <metahttp-equiv="Content-Type" content="text/html;charset=windows-1251">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}" />    
+</head>
 <body>
     
         <div id = "header">
@@ -68,7 +68,18 @@
         <h1 id = "headNews">Новости</h1>
         <div id = "newsContent">
 		<div id="scroling">
-             @yield('news')
+             @foreach($newsHome as $new)
+            <h2 id = "headtextNews">
+                {{$new->title}}
+            </h2>
+            <p id = "publicTextNews">
+                Опубликовано: {{ $new->created_at}}
+            </p>
+            <p id = "contentTextNews">
+                {!!$new->content!!}
+            </p>        
+
+@endforeach
 		</div>
         </div>
     </div>

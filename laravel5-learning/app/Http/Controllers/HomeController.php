@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(Home $homeNewsModel)
     {
         $homeNews = $homeNewsModel->getPublishedNews();
-        return view('home.reques_news', ['newsHome' => $homeNews]);
+        return view('index', ['newsHome' => $homeNews]);
     }
 	public function store()
 	{
